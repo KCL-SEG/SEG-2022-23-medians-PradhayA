@@ -6,9 +6,8 @@ while True:
     try:
         print("Enter a list of numbers separated by commas: ")
         numbers = [float(value) for value in input().split(",")]
-        if len(numbers) == 1:
-            solution = numbers[0]
-        elif len(numbers) % 2 == 1:
+        numbers.sort()
+        if len(numbers) % 2 == 1:
             solution = numbers[len(numbers)//2]
         else:
             solution = (numbers[len(numbers)//2] + numbers[len(numbers)//2 - 1])/2
